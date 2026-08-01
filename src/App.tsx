@@ -28,6 +28,7 @@ function App() {
       <RefineKbarProvider>
         <ThemeProvider>
           <DevtoolsProvider>
+
             <Refine
               dataProvider={dataProvider}
               notificationProvider={useNotificationProvider()}
@@ -51,12 +52,10 @@ function App() {
                 }
               ]}
             >
+
               <Routes>
-                <Route element={
-                  <Layout>
-                    <Outlet/>
-                  </Layout>
-                }>
+                <Route element={<Layout><Outlet/></Layout>}>
+
                   <Route path={'/'} element={<Dashboard />} />
                   <Route path={'/subjects'}>
                     <Route index element={<SubjectsList/> }/>
@@ -65,6 +64,8 @@ function App() {
                 </Route>
 
               </Routes>
+
+
               <Toaster />
               <RefineKbar />
               <UnsavedChangesNotifier />

@@ -96,7 +96,7 @@ const SubjectsList = () => {
 
                             <SelectContent>
                                 <SelectItem value={'all'}>
-                                    All Department
+                                    All Departments
                                 </SelectItem>
 
                                 {
